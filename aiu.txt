@@ -1,1 +1,10 @@
-aiu
+
+
+mysql> SELECT*FROM user;
++---------+--------------+----------+-------------------+
+| user_no | user_name    | position | mail              |
++---------+--------------+----------+-------------------+
+|   10001 | yamadataro   | CEO      | yamada@hoge.jp    |
+|   10004 | sirosuzuki   | seafood  | suzuki@hoge,jp    |
+|   10018 | ichirotanaka | NULL     | tanakaman@hoge.jp |
++---------+--------------+----------+-------------------+
