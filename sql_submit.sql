@@ -33,3 +33,11 @@ INSERT INTO item VALUES(NULL,'こんがり肉',500,2);
 INSERT INTO item VALUES(NULL,'書き方ドリルSQL',2500,3);
 INSERT INTO item VALUES(NULL,'ふわふわのベッド',30000,1);
 INSERT INTO item VALUES(NULL,'ミラノ風ドリア',300,2);
+
+SELECT item_name,item_price FROM item WHERE category_id=1;
+SELECT item_name,item_price FROM item WHERE item_price>=1000;
+SELECT item_name,item_price FROM item WHERE item_name LIKE '%肉%';
+SELECT item_id,item_name,item_price,category_name FROM item INNER JOIN item_category ON item.category_id= item_category.category_id;
+
+SELECT category_name,SUM(item_price) AS total_price FROM item INNER JOIN item_category ON item.category_id= item_category.category_id GROUP BY category_name ORDER BY total_price DESC;
+
